@@ -6,3 +6,5 @@ with following features:
 -   Movie = search page. Calls to OMDB API with the title searched for and displays search results.
 -   Button to "add to playlist" which saves movies to playlist.
 -   Watchlist.html loads and displays movies from playlist.
+
+github link :- https://git-shashankupadhyay.github.io/fasal-assginment/index.html
