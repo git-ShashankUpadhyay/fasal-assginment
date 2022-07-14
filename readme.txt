@@ -8,3 +8,4 @@ with following features:
 -   Watchlist.html loads and displays movies from playlist.
 
 github link :- https://git-shashankupadhyay.github.io/fasal-assginment/index.html
+github repository :- https://github.com/git-ShashankUpadhyay/fasal-assginment

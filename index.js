@@ -1,14 +1,3 @@
-// var firebaseConfig = {
-//     apiKey: "AIzaSyAf0P6f6wUepuynZ8ih8lU2U2K-x2W1e8g",
-//     authDomain: "sih-website2022.firebaseapp.com",
-//     projectId: "sih-website2022",
-//     storageBucket: "sih-website2022.appspot.com",
-//     messagingSenderId: "262578655475",
-//     appId: "1:262578655475:web:9fb9b16e5d47e11cc66786"
-// };
-
-// firebase.initializeApp(firebaseConfig);
-
 const auth = firebase.auth()
 
 

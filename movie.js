@@ -14,7 +14,7 @@ if (searchBtn) {
 }
 
 async function searchMovies() {
-    // Hide default elements
+
     if (moviesList.children) {
         let children = moviesList.children
         let childrenArr = Array.prototype.slice.call(children)
@@ -26,7 +26,6 @@ async function searchMovies() {
 
     const movies = data.Search
 
-    // Get and display search results
     movies.forEach(async (movie) => {
         let response = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=ef49e83b`)
         let moviesListData = await response.json()
@@ -105,7 +104,6 @@ function addToWatchlist(movieIDkey, movieID, watchlistBtnKey, removeBtnKey) {
 function removeFromWatchlist(movieIDkey, removeBtnKey, watchlistBtnKey, removeBtnKey) {
     localStorage.removeItem(movieIDkey.innerHTML)
 
-    // Get parent element (the movie card div) and remove it
     if (watchlist) {
         localStorage.removeItem(movieIDkey.innerHTML)
 
@@ -116,7 +114,6 @@ function removeFromWatchlist(movieIDkey, removeBtnKey, watchlistBtnKey, removeBt
     watchlistBtnKey.style.display = 'inline'
     removeBtnKey.style.display = 'none'
 
-    // Display default elements if local storage empty
     if (watchlist && localStorage.length === 0) {
         if (watchlist.children) {
             const children = watchlist.children
@@ -126,7 +123,6 @@ function removeFromWatchlist(movieIDkey, removeBtnKey, watchlistBtnKey, removeBt
     }
 }
 
-// Hide default elements if data is in local storage
 if (watchlist && localStorage.length > 0) {
     if (watchlist.children) {
         const children = watchlist.children
@@ -138,16 +134,13 @@ if (watchlist && localStorage.length > 0) {
 for (let i = 0; i < localStorage.length; i++) {
     const getLocalStorage = localStorage.getItem(localStorage.key(i))
 
-    // Display every key's value to the watchlist
     if (watchlist) {
         watchlist.innerHTML += `<div class="card">${getLocalStorage}</div>`
 
-        // Hide the 'add to watchlist' button
         for (let button of cardWatchlistBtn) {
             button.style.display = 'none'
         }
 
-        // Display the 'remove from watchlist' button
         for (let button of removeWatchlistBtn) {
             button.style.display = 'inline'
         }
