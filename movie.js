@@ -149,8 +149,6 @@ for (let i = 0; i < localStorage.length; i++) {
 firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
         location.replace("index.html")
-    }else {
-        document.getElementById("user").innerHTML = "Hello, " + user.uid
     }
 })
 function logout() {
